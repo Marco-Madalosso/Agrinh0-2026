@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrinho 2026 - Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌱 Agrinho 2026</h1>
+    <p class="subtitle">Flashcards Educativos - Aprenda se divertindo!</p>
+  </header>
+  
+  <main>
+    <div class="progress">
+      Cartão <span id="current">1</span> de <span id="total">8</span>
+    </div>
+    
+    <div class="card-container" id="cardContainer">
+      <div class="flashcard" id="flashcard">
+        <!-- Frente do cartão -->
+        <div class="card-face card-front" id="front">
+          <div class="card-content">
+            <div class="question" id="question">Qual é o tema do Agrinho 2026?</div>
+          </div>
+        </div>
+        <!-- Verso do cartão -->
+        <div class="card-face card-back" id="back">
+          <div class="card-content">
+            <div class="answer" id="answer">Ainda será divulgado oficialmente, mas geralmente envolve agricultura, meio ambiente e tecnologia no campo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="previousCard()">← Anterior</button>
+      <button onclick="flipCard()">Virar Cartão</button>
+      <button onclick="nextCard()">Próximo →</button>
+    </div>
+
+    <!-- Imagens de Agropecuária já inseridas -->
+    <div class="agro-images">
+      <img src="https://assets.revistacultivar.com.br/13aef9fa-fbda-4779-a377-733901ebc69c.JPG" alt="Fazenda sustentável com plantação e trator" />
+      <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/26657301-ai-gerado-ai-generativo-vaca-animal-face-frontal-engracado-retrato-as-verde-campo-fazenda-panorama-agricultura-natureza-ao-ar-livre-vila-viver-estilo-grafico-arte-foto.jpg" alt="Agricultor feliz com horta e animais" />
+    </div>
+
+  </main>
+  
+  <footer>
+    <p>Programa Agrinho 2026 • SENAR • Aprendendo sobre o campo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
