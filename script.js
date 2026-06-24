@@ -40,6 +40,7 @@ const questionEl = document.getElementById('question');
 const answerEl = document.getElementById('answer');
 const currentEl = document.getElementById('current');
 const totalEl = document.getElementById('total');
+const progressFill = document.getElementById('progressFill');
 
 totalEl.textContent = cards.length;
 
@@ -48,6 +49,10 @@ function updateCard() {
   answerEl.textContent = cards[currentIndex].answer;
   flashcard.classList.remove('flipped');
   currentEl.textContent = currentIndex + 1;
+  
+  // Atualiza a barra de progresso
+  const progress = ((currentIndex + 1) / cards.length) * 100;
+  progressFill.style.width = `${progress}%`;
 }
 
 function flipCard() {
@@ -69,11 +74,12 @@ document.getElementById('cardContainer').addEventListener('click', (e) => {
   if (!e.target.closest('button')) flipCard();
 });
 
-// Teclas
+// Teclas do teclado
 document.addEventListener('keydown', (e) => {
   if (e.key === " " || e.key === "Enter") flipCard();
   if (e.key === "ArrowRight") nextCard();
   if (e.key === "ArrowLeft") previousCard();
 });
 
+// Inicia o primeiro cartão
 updateCard();
